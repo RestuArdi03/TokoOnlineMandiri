@@ -107,5 +107,14 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
+        $user = user::findOrFail($id);
+        if ($user->foto) {
+            $oldImagePath = public_path('storage/img-user/') . $user->foto;
+            if (file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+        }
+        $user->delete();
+        return redirect()->route('backend.user.index')->with('success', 'Data berhasil dihapus');
     }
 }
