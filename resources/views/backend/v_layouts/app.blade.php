@@ -122,19 +122,16 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>   
-                                <!--@if (Auth::user()->foto)
+                                @if (Auth::user()->foto)
                                 <img src="{{ asset('storage/img-user/' . Auth::user()->foto) }}" alt="user" class="rounded-circle" width="31">
                                 @else
                                 <img src="{{ asset('storage/img-user/img-default.jpg') }}" alt="user" class="rounded-circle" width="31">
-                                @endif-->
+                                @endif
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <!--<a class="dropdown-item" href="{{ route('backend.user.edit', Auth::user()->id) }}"><i class="ti-user m-r-5 m-l-5"></i> Profil Saya</a>-->
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> Profil Saya</a>
+                                <a class="dropdown-item" href="{{ route('backend.user.edit', Auth::user()->id) }}"><i class="ti-user m-r-5 m-l-5"></i> Profil Saya</a>
                                 <a class="dropdown-item" href="" onclick="event.preventDefault(); document.getElementById('keluar-app').submit();"><i class="fa fa-power-off m-r-5 m-l-5"></i> Keluar</a>
                                 <div class="dropdown-divider"></div>
-
                             </div>
                         </li>
                         <!-- ============================================================== -->
