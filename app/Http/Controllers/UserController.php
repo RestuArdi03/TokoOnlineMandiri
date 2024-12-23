@@ -26,6 +26,9 @@ class UserController extends Controller
     public function create()
     {
         //
+        return view('backend.v_user.create', [
+            'judul' => 'Tambah User',
+        ]);
     }
 
     /**
